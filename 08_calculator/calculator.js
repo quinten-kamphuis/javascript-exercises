@@ -1,26 +1,17 @@
-const add = function() {
-	
-};
+const add = (...values) => values.reduce((acc, val) => acc + val);
 
-const subtract = function() {
-	
-};
+const subtract = (...values) => values.reduce((acc, val) => acc - val);
 
-const sum = function() {
-	
-};
+const sum = values => values.length ? values.reduce(((acc, val) => acc + val)) : 0;
 
-const multiply = function() {
+const multiply = values => values.length ? values.reduce(((acc, val) => acc * val)) : 0;
 
-};
+const power = (...values) => values.reduce((acc, val) => Math.pow(acc, val));
 
-const power = function() {
-	
-};
+const factorial = value => value ? Array.from({ length: value }, (v, i) => value - i).reduce(((acc, val) => acc * val)) : 1;
 
-const factorial = function() {
-	
-};
+console.log(factorial(0))
+
 
 // Do not edit below this line
 module.exports = {
